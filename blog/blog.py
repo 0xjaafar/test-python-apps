@@ -13,12 +13,14 @@ class Blog:
             self.title, self.author, len(self.posts), "s" if len(self.posts) > 1 else ""
         )
 
-    def create_post(self, title: str, content: str):
-        self.posts.append(Post(title, content))
-
     def json(self):
         return {
             "title": self.title,
             "author": self.author,
             "posts": [post.json() for post in self.posts],
         }
+    
+    def create_post(self, title: str, content: str):
+        self.posts.append(Post(title, content))
+
+    

@@ -9,8 +9,7 @@ flake8 = flake8 $(pkg_src) $(tests_src)
 unittest_tests=python3 -m unittest discover -s . -p "*_test.py"
 
 
-
-.PHONY: format
+ .PHONY: format
 format:
 	$(isort)
 	$(black)

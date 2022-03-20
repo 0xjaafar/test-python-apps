@@ -27,3 +27,5 @@ class BlogTest(TestCase):
         b.posts.append(p)
         expected_repr = "my-blog by jaafar (2 posts)"
         self.assertEqual(expected_repr, b.__repr__())
+
+        
