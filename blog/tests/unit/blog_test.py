@@ -14,18 +14,16 @@ class BlogTest(TestCase):
         b = Blog("my-blog", "jaafar")
         expected_json = {"title": "my-blog", "author": "jaafar", "posts": []}
         self.assertDictEqual(expected_json, b.json())
-    
+
     def test_repr(self):
         b = Blog("my-blog", "jaafar")
         expected_repr = "my-blog by jaafar (0 post)"
         self.assertEqual(expected_repr, b.__repr__())
-    
+
     def test_repr_multi_posts(self):
-        p = Post('test', 'my test content')
+        p = Post("test", "my test content")
         b = Blog("my-blog", "jaafar")
         b.posts.append(p)
         b.posts.append(p)
         expected_repr = "my-blog by jaafar (2 posts)"
         self.assertEqual(expected_repr, b.__repr__())
-
-        

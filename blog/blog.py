@@ -19,8 +19,6 @@ class Blog:
             "author": self.author,
             "posts": [post.json() for post in self.posts],
         }
-    
+
     def create_post(self, title: str, content: str):
         self.posts.append(Post(title, content))
-
-    

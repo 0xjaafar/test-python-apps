@@ -6,7 +6,7 @@ tests_src = $(app_root)/tests
 pyclean=pyclean .
 black = black $(pkg_src) $(tests_src)
 flake8 = flake8 $(pkg_src) $(tests_src)
-unittest_tests=python3 -m unittest discover -s . -p "*_test.py"
+unittest_tests=python3 -m unittest discover -s . -p "*_test.py" --verbose
 
 
  .PHONY: format
